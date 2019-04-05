@@ -1,0 +1,51 @@
+package syj;
+/*1.
+자바 백화점이 있습니다. 이 백화점에 가전매장과 의류매장이 있습니다.
+가전매장에는 TV와 냉장고가 있습니다. TV와 냉장고의 가격은 난수로 합니다.
+의류매장에는 청바지와 T셔츠가 있습니다. 청바지와 T셔츠의 가격은 난수로 합니다.
+백화점의 각 매장안에 있는 상품의 가격을 출력합니다.
+2. 
+자바 초등학교가 있습니다. 이 초등학교에 개나리반과 진달래반이 있습니다.
+개나리반의 총 정원은 5명입니다. 진달래반의 총 정원은 10명 입니다.
+이 초등학교의 개나리반과 진달래반의 총 정원을 출력합니다.
+*/
+class Department {
+	Department(){el = new Electro(); cl = new Cloth(); }
+	Electro el; Cloth cl; 
+}
+class Electro{
+	Electro(){tv = new Tv(); re = new Refrige();}
+	Tv tv; Refrige re;
+}
+class Tv{
+	int price;
+	Tv(){price = ((int)(Math.random()*200));}
+}
+class Refrige{
+	int price; 
+	Refrige(){price = ((int)(Math.random()*500)); }
+}
+class Cloth{
+	Pants p; Tshirt t; 
+	Cloth(){p = new Pants(); t = new Tshirt();}
+}
+class Pants{
+	int price; 
+	Pants(){price = ((int)(Math.random()*50));}
+}
+class Tshirt{
+	int price;
+	Tshirt(){price = ((int)(Math.random()*30));}
+}
+public class JavaDepartmentStore {
+
+	public static void main(String[] args) {
+	Department depar =  new Department();
+	System.out.println("냉장고 가격은 : " + depar.el.re.price);
+	System.out.println("테레비 가격은: " + depar.el.tv.price);
+	System.out.println("바지의 가격은: " + depar.cl.p.price);
+	System.out.println("티샤쓰의 가격은: " + depar.cl.t.price);
+	
+	}
+
+}
