@@ -206,6 +206,315 @@ public class Study {
  
 
 
+////////
+package syj;
+
+class Honggildong{
+	Honggildong(){
+		w = new Wallet ();
+	
+	}
+	Wallet w;
+	void buy(Item item ) {
+		
+	}
+	
+}
+class Item {
+	Item(){}
+	Item(){ price = 100;}    // pdf 3 pg에 설명 나와있음. 
+}
+class Wallet{
+	Wallet (){}
+}
+public class Study {
+
+	public static void main(String[] args) {
+		Item i = new Item();	
+		Honggildong h = new Honggildong(); h.buy(i);
+			
+
+	}
+
+
+
+
+
+//////////////
+
+
+
+
+package syj;
+
+class Honggildong{
+	Honggildong(){
+		w = new Wallet ();
+	
+	}
+	Wallet w;
+	void buy(Item item ) {
+		
+	}
+	
+}
+class Item {
+	int price ; 
+	Item(){this.price = 100;}    // pdf 3 pg에 설명 나와있음. 
+}
+class Wallet{
+	Wallet (){}
+}
+public class Study {
+
+	public static void main(String[] args) {
+		Item i = new Item();	
+		Honggildong h = new Honggildong(); h.buy(i);
+			
+
+	}
+
+}
+
+
+
+
+
+//////////////////
+
+
+
+package syj;
+
+class Honggildong{
+	Honggildong(){
+		w = new Wallet ();
+		pocketMoney = 1000; //길동이 지갑에 1000원을 넣어주게 됨. 
+	}
+	Wallet w; int pocketMoney; //1000원 넣기 전에 먼저 작성. 객체로 포켓머니 뽑기. 
+	
+	void buy(Item item ) {
+		
+	}
+	
+}
+class Item {
+	int price ; 
+	Item(){this.price = 100;}    // pdf 3 pg에 설명 나와있음. 
+}
+class Wallet{
+	Wallet (){}
+}
+public class Study {
+
+	public static void main(String[] args) {
+		Item i = new Item();	
+		Honggildong h = new Honggildong(); h.buy(i);
+			
+
+	}
+
+}
+
+
+
+///////////////////
+
+
+
+
+package syj;
+
+class Honggildong{
+	Honggildong(){
+		w = new Wallet ();
+		pocketMoney = 1000; //길동이 지갑에 1000원을 넣어주게 됨. 
+	}
+	Wallet w; int pocketMoney; //1000원 넣기 전에 먼저 작성. 객체로 포켓머니 뽑기. 
+								//또한 이 포켓머니가 줄어들려면 사는 행동으로 인해 돈이 줄어들기 때문에 밑의 매서드에서 진행한다. (void)
+	
+	void buy(Item item ) { pocketMoney = pocketMoney - item.price;   //====여기가 ,4pg내용
+		
+	}
+	
+}
+class Item {
+	int price ; 
+	Item(){this.price = 100;}    // pdf 3 pg에 설명 나와있음. 
+}
+class Wallet{
+	Wallet (){}
+}
+public class Study {
+
+	public static void main(String[] args) {
+		Item i = new Item();	
+		Honggildong h = new Honggildong(); h.buy(i);
+		System.out.println(h.pocketMoney);
+
+	}
+
+}
+
+
+
+
+
+
+
+///////////////////
+
+
+package syj;
+
+class Honggildong{
+	Honggildong(){
+		w = new Wallet ();
+		pocketMoney = 1000; //길동이 주머니에 1000원을 넣어주게 됨. 
+	}
+	Wallet w; int pocketMoney; //1000원 넣기 전에 먼저 작성. 객체로 포켓머니 뽑기. 
+								//또한 이 포켓머니가 줄어들려면 사는 행동으로 인해 돈이 줄어들기 때문에 밑의 매서드에서 진행한다. (void)
+	
+	void buy(Item item ) { pocketMoney = pocketMoney - item.price;
+		
+	}
+	
+}
+class Item {
+	int price ; 
+	Item(){this.price = 100;}    // pdf 3 pg에 설명 나와있음. 
+}
+class Wallet{
+	int money;
+	Wallet (){money = 1000;}   //지갑에 천원 넣어주기. 
+}
+public class Study {
+
+	public static void main(String[] args) {
+		Item i = new Item();	
+		Honggildong h = new Honggildong(); h.buy(i);
+		System.out.println("지갑안의 돈 : " + h.w.money);    // 지갑안의 돈을 뽑아보기, 홍길동의 h -> 지갑안의 w -> 돈 money  //여기까지 5pg
+		System.out.println(h.pocketMoney);
+
+	}
+
+}
+
+
+
+
+
+//////////////////////////////////////
+
+
+
+
+
+package syj;
+
+class Honggildong{
+	Honggildong(){
+		w = new Wallet ();
+		pocketMoney = 1000; //길동이 주머니에 1000원을 넣어주게 됨. 
+	}
+	Wallet w; int pocketMoney; //1000원 넣기 전에 먼저 작성. 객체로 포켓머니 뽑기. 
+								//또한 이 포켓머니가 줄어들려면 사는 행동으로 인해 돈이 줄어들기 때문에 밑의 매서드에서 진행한다. (void)
+	
+	void buy(Item item ) { pocketMoney = pocketMoney - item.price;
+		
+	}
+	
+}
+class Item {
+	int price ; 
+	Item(int price){this.price = price;}    // pdf 3 pg에 설명 나와있음. 
+				//여기를 프라이스로 바꾸면서 퍼블릭보이드에서 그자리에 숫자를 넣으면 항상 숫자를 바꿀수 잇음
+}
+class Wallet{
+	int money;
+	Wallet (){money = 1000;}   //지갑에 천원 넣어주기. 
+}
+public class Study {
+
+	public static void main(String[] args) {
+		Item item100= new Item(100);//100원짜리 물건	
+		Item item500= new Item(500);//500원짜리 물건
+		
+		Honggildong h = new Honggildong(); 
+		h.buy(item100);//홍길동이가 100원짜리 물건을 구매
+		h.buy(item500);//홍길동이가 500원짜리 물건을 구매 
+		
+		
+		System.out.println("지갑안의 돈 : " + h.w.money);    // 지갑안의 돈을 뽑아보기, 홍길동의 h -> 지갑안의 w -> 돈 money  //여기까지 5pg
+		System.out.println(h.pocketMoney);
+
+	}
+
+}
+
+
+
+///////////////////////
+
+
+
+
+/*객체 만들기 예제 8)
+홍길동이 지갑을 가지고 있고, 천원이 있다. 물건을 구매할 수 있다.
+물건은 두 개이고 가격은 각 각 100원과 500원 이다.
+홍길동이 100원짜리 물건을 구매하면 홍길동이는 900원이 남는다. 지갑 안에는 1000원이 있다.
+홍길동이 500원짜리 물건을 또 구매하면 홍길동이에는 400원이 남는다.
+홍길동이 지갑안의 돈으로 500원짜리 물건을 구매한다. 지갑안에는 500원이 남는다*/
+
+
+
+package syj;
+
+class Honggildong{
+	Honggildong(){
+		w = new Wallet (); 
+		
+		pocketMoney = 1000; 
+
+	}
+	Wallet w; int pocketMoney; 
+							//또한 이 포켓머니가 줄어들려면 사는 행동으로 인해 돈이 줄어들기 때문에 밑의 매서드에서 진행한다. (void)
+	
+	void buy(Item item ) { pocketMoney = pocketMoney - item.price;
+	}
+	void buy2(Item witem) { w.money = w.money - witem.price;
+	}
+	
+}
+class Item {
+	int price ; 
+	Item(int price){this.price = price;}    
+}
+class Wallet{
+	int money = 1000;
+
+	Wallet (){}   
+}
+public class Study {
+
+	public static void main(String[] args) {
+		Item item100= new Item(100);//100원짜리 물건	
+		Item item500= new Item(500);//500원짜리 물건
+		Item wItem500= new Item(500);
+		Honggildong h = new Honggildong(); 
+		h.buy(item100);//홍길동이가 100원짜리 물건을 구매
+		h.buy(item500);//홍길동이가 500원짜리 물건을 구매 
+		h.buy2(wItem500);
+		
+		System.out.println("지갑안의 돈 : " + h.w.money);    // 지갑안의 돈을 뽑아보기, 홍길동의 h -> 지갑안의 w -> 돈 money  //여기까지 5pg
+	
+		System.out.println("얼마임?: "+ h.pocketMoney);
+
+	}
+
+}
+
+
 
 
 
