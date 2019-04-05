@@ -1,0 +1,35 @@
+package syj;
+/*2. 
+자바 초등학교가 있습니다. 이 초등학교에 개나리반과 진달래반이 있습니다.
+개나리반의 총 정원은 5명입니다. 진달래반의 총 정원은 10명 입니다.
+이 초등학교의 개나리반과 진달래반의 총 정원을 출력합니다.
+*/
+ class Element{
+	 Element(){
+		 ga = new Gaenari(); ji = new Jindarlae();
+		 }
+	 Gaenari ga; Jindarlae ji;
+	 void showPrint() {
+		 System.out.println(ga.students+ji.students);
+	 }
+ }
+ 
+ class Gaenari{
+	 int students;
+	 Gaenari(){students = 5;}
+ }
+ class Jindarlae{
+	 int students;
+	 Jindarlae(){students = 10;}
+	 
+ }
+public class JavaElementarySchool {
+
+	public static void main(String[] args) {
+	Element el = new Element();
+	//System.out.println("전교생 수:"+(el.ga.students+el.ji.students));
+	el.showPrint();
+
+	}
+
+}
