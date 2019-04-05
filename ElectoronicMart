@@ -1,0 +1,55 @@
+package senior;
+//가전매장이 있습니다. 이 매장에 TV가 있습니다.
+//이 매장에 라디오가 있습니다. TV의 가격은 만원, 라디오는 오천원
+//손님이 있습니다. 손님이 십만원을 가지고 있습니다.
+//손님이 매장안의 TV를 삽니다.손님이 매장안의 라디오를 삽니다.
+class Customer {
+	Customer(){
+		pocketMoney = 100000;
+	}
+	int pocketMoney;
+	void buy(TV tv) {
+		//용돈이 TV의 가격만큼 줄어든다.
+		pocketMoney= pocketMoney - tv.price; 
+	}
+	void buyRadio(Radio radio) {
+		pocketMoney= pocketMoney - radio.price; 
+	}
+}
+class ElectronMart {
+	ElectronMart(){
+		tv = new TV(); radio = new Radio();
+	}
+	TV tv; Radio radio;
+}
+class TV {
+	int price;
+	TV(){
+		price = 10000;
+	}
+}
+class Radio {
+	int price;
+	Radio(){
+		price = 5000;
+	}
+}
+public class Study3 {
+	public static void main(String[] args) {
+		ElectronMart em = new ElectronMart();
+		System.out.println(em.tv.price);
+		System.out.println(em.radio.price);
+		Customer guest = new Customer();
+		System.out.println("구매전:"+guest.pocketMoney);
+		guest.buy(em.tv);
+		guest.buyRadio(em.radio);
+		System.out.println("구매후:"+guest.pocketMoney);
+	}
+}
+
+
+
+
+
+
+
