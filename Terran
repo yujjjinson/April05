@@ -1,0 +1,35 @@
+package senior;
+//테란이있다. 저그가 있다. 질럿이있다. 이 유닛들은 상대방을 공격할 수 있다.
+class Terran {
+	int energy;
+	Terran(){ energy = 100;}
+	void attackTerran(Terran t) { t.energy = t.energy - 10;}
+	void attackZilet(Zilet z) {z.energy = z.energy - 10;}
+	void attackZerg(Zerg z) {z.energy = z.energy - 10;}
+}
+class Zilet {
+	int energy;
+	Zilet(){ energy = 100;}
+	void attackTerran(Terran t) { t.energy = t.energy - 10;}
+	void attackZilet(Zilet z) {z.energy = z.energy - 10;}
+	void attackZerg(Zerg z) {z.energy = z.energy - 10;}
+}
+class Zerg {
+	int energy;
+	Zerg(){ energy = 100;}
+	void attackTerran(Terran t) { t.energy = t.energy - 10;}
+	void attackZilet(Zilet z) {z.energy = z.energy - 10;}
+	void attackZerg(Zerg z) {z.energy = z.energy - 10;}
+}
+
+public class Study2 {
+	public static void main(String[] args) {
+		Terran t1 = new Terran();
+		Terran t2 = new Terran();
+		Zerg z1 = new Zerg();
+		Zilet zt1 = new Zilet();
+		//t1이 t2를 공격한다.
+		t1.attackTerran(t2);
+		System.out.println(t2.energy);
+	}
+}
